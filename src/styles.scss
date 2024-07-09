@@ -1,0 +1,81 @@
+body{
+    background-color: rgb(15,11,11);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+.contenedor_titulo{
+    text-align: center;
+}
+.titulo{
+    width: 700px;    height: 200px;
+}
+.ps_logo{
+    position:absolute;
+    top: 10px;      right: 10px;
+    width: 50px;     height: 50px;
+}
+.botonera{
+    display: flex;
+    background-color: rgb(11, 6, 6);
+}
+.navegacion{
+    width: 100%;
+    margin: 20px;
+    display: flex;
+    font-style: italic;
+    justify-content: space-around;
+    font-size: 30px;
+    list-style: none;
+}
+.item {
+    color: white;
+}
+.liboton:hover {
+    background: green;
+}
+h1 {
+    text-decoration: underline gray;
+    text-transform: capitalize;
+    color: rgb(211, 52, 52);
+}
+h2 {
+    text-decoration: underline gray;
+    text-transform: capitalize;
+    color: rgb(211, 52, 52);
+    margin: 25px;
+}
+.texto_imagen{
+    display: flex;
+    justify-content: space-around;
+}
+p {
+    margin: 10px;
+    font-size: 20px;
+}
+.caracteristicas_images {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+th {
+    background-color: rgb(54, 18, 168);
+}
+table, td, tr {
+    border: 100px red;
+    border-collapse: collapse;
+    background-color: rgb(42, 21, 109);
+}
+table{
+    width: 100%;
+}
+.tdtabla {
+    font-size: 20px;
+    text-align: center;
+}
+.foot {
+    background-color: cornflowerblue;
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    margin: 10px;
+}

@@ -1,0 +1,30 @@
+<table>
+    <thead>
+            <tr>
+                <th>Caratula</th>
+                <th>Nombre</th>
+                <th>Fecha de Salida</th>
+                <th>Precio</th>
+                <th>Stock</th>
+            </tr>
+    </thead>
+    <tbody>
+        @for (game of games; track game.nombre) {
+            <tr>
+                <td><img [src]="game.caratula" [alt] ="game.nombre"></td>
+                <td>{{ game.nombre }}</td>
+                <td>{{ game.precio }}</td>
+                <td>{{ game.fecha_salida }}</td>
+                @if (game.stock >0) {
+                    <td>{{ game.stock }}</td>
+                } @else {
+                    <td>SIN STOCK</td>
+                }
+            </tr>
+        } @empty {
+            <tr>
+            <td>No hay juegos para mostrar.</td>
+            </tr>
+        }
+    </tbody>
+</table>
