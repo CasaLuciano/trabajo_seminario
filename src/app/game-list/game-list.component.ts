@@ -12,7 +12,7 @@ export class GameListComponent {
     "nombre": "god of war 2",
     "fecha_salida": "13/03/2007",
     "precio": 20,
-    "stock": 3
+    "stock": 0
     },
     {
       "caratula": "assets/images/Caratulas/godofwar.jfif",
