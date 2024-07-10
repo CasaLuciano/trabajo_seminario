@@ -6,20 +6,26 @@
                 <th>Fecha de Salida</th>
                 <th>Precio</th>
                 <th>Stock</th>
+                <th>Comprar</th>
             </tr>
     </thead>
     <tbody>
         @for (game of games; track game.nombre) {
             <tr>
-                <td><img [src]="game.caratula" [alt] ="game.nombre"></td>
+                <td class="caratulas_juegos"><img class="img-thumbnail w-50" [src]="game.caratula" [alt] ="game.nombre"></td>
                 <td>{{ game.nombre }}</td>
-                <td>{{ game.precio }}</td>
                 <td>{{ game.fecha_salida }}</td>
+                <td>{{ game.precio }}</td>
                 @if (game.stock >0) {
                     <td>{{ game.stock }}</td>
                 } @else {
                     <td>SIN STOCK</td>
                 }
+                <td>
+                    <button class="btn btn-primary" (click)="restar_cantidad(game)">-</button>
+                    <p [(ngModel)]="game.cantidad"> {{game.cantidad}} </p>
+                    <button class="btn btn-primary" (click)="aumentar_cantidad(game)">+</button>
+                </td>
             </tr>
         } @empty {
             <tr>

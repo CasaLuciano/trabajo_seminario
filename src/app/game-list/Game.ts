@@ -4,4 +4,5 @@ export interface Game{
     "fecha_salida": string;
     "precio": number;
     "stock": number;
+    "cantidad": number;
 }
