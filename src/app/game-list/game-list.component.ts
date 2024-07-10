@@ -1,30 +1,22 @@
 import { Component } from '@angular/core';
 import { Game } from './Game';
+import { GameDataService } from '../game-data.service';
 @Component({
   selector: 'app-game-list',
   templateUrl: './game-list.component.html',
   styleUrl: './game-list.component.scss'
 })
 export class GameListComponent {
-  games:Game[] = [
-    {
-    "caratula": "assets/images/Caratulas/godofwar.jfif",
-    "nombre": "god of war 1",
-    "fecha_salida": "13/03/2007",
-    "precio": 20,
-    "stock": 0,
-    "cantidad": 0,
-    },
-    {
-      "caratula": "assets/images/Caratulas/godofwar.jfif",
-      "nombre": "god of war 2",
-      "fecha_salida": "13/03/2007",
-      "precio": 20,
-      "stock": 3,
-      "cantidad":0,
-    },
-    
-  ]
+  games:Game[] = [];
+  
+  constructor (
+    private gameDataService: GameDataService
+  ){}
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    this.gameDataService.getAll().subscribe(games=> this.games = games);
+  }
   aumentar_cantidad(game:Game): void{
     if(game.stock && game.cantidad < game.stock)
     game.cantidad++;
@@ -33,5 +25,4 @@ export class GameListComponent {
     if(game.cantidad > 0)
     game.cantidad--;
   }
-
 }

@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { GamestoreHomeComponent } from './gamestore-home/gamestore-home.component';
 import { GamestoreComponent } from './gamestore/gamestore.component';
 import { GameCartComponent } from './game-cart/game-cart.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { GameCartComponent } from './game-cart/game-cart.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
