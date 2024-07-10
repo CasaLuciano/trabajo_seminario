@@ -9,7 +9,7 @@ export class GameListComponent {
   games:Game[] = [
     {
     "caratula": "assets/images/Caratulas/godofwar.jfif",
-    "nombre": "god of war 2",
+    "nombre": "god of war 1",
     "fecha_salida": "13/03/2007",
     "precio": 20,
     "stock": 0,
@@ -33,4 +33,5 @@ export class GameListComponent {
     if(game.cantidad > 0)
     game.cantidad--;
   }
+
 }

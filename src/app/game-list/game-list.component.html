@@ -23,7 +23,15 @@
                 }
                 <td>
                     <button class="btn btn-primary" (click)="restar_cantidad(game)">-</button>
-                    <p [(ngModel)]="game.cantidad"> {{game.cantidad}} </p>
+
+                    <input 
+                    class="form-control-sm" 
+                    type= "number"  
+                    inputmode="numeric"
+                    [max]="game.stock"
+                    [(ngModel)]="game.cantidad" 
+                    >
+                    
                     <button class="btn btn-primary" (click)="aumentar_cantidad(game)">+</button>
                 </td>
             </tr>
