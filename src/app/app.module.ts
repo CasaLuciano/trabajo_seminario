@@ -6,11 +6,17 @@ import { AppComponent } from './app.component';
 import { GameListComponent } from './game-list/game-list.component';
 
 import { FormsModule } from '@angular/forms';
+import { GamestoreHomeComponent } from './gamestore-home/gamestore-home.component';
+import { GamestoreComponent } from './gamestore/gamestore.component';
+import { GameCartComponent } from './game-cart/game-cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GameListComponent
+    GameListComponent,
+    GamestoreHomeComponent,
+    GamestoreComponent,
+    GameCartComponent
   ],
   imports: [
     BrowserModule,
