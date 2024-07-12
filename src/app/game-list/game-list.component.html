@@ -22,17 +22,10 @@
                     <td>SIN STOCK</td>
                 }
                 <td>
-                    <button class="btn btn-primary" (click)="restar_cantidad(game)">-</button>
-
-                    <input 
-                    class="form-control-sm" 
-                    type= "number"  
-                    inputmode="numeric"
-                    [max]="game.stock"
-                    [(ngModel)]="game.cantidad" 
-                    >
-                    
-                    <button class="btn btn-primary" (click)="aumentar_cantidad(game)">+</button>
+                    @if (game.stock > 0) {
+                    <app-input-integer [(cantidad)]="game.cantidad" [max]="game.stock"></app-input-integer>
+                    Cant:  {{game.cantidad}}
+                    }
                 </td>
             </tr>
         } @empty {

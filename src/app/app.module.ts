@@ -10,6 +10,7 @@ import { GamestoreHomeComponent } from './gamestore-home/gamestore-home.componen
 import { GamestoreComponent } from './gamestore/gamestore.component';
 import { GameCartComponent } from './game-cart/game-cart.component';
 import { HttpClientModule } from '@angular/common/http';
+import { InputIntegerComponent } from './input-integer/input-integer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     GameListComponent,
     GamestoreHomeComponent,
     GamestoreComponent,
-    GameCartComponent
+    GameCartComponent,
+    InputIntegerComponent
   ],
   imports: [
     BrowserModule,
