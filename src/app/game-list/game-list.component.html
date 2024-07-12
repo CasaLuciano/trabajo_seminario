@@ -6,6 +6,7 @@
                 <th>Fecha de Salida</th>
                 <th>Precio</th>
                 <th>Stock</th>
+                <th>Cantidad</th>
                 <th>Comprar</th>
             </tr>
     </thead>
@@ -21,12 +22,17 @@
                 } @else {
                     <td>SIN STOCK</td>
                 }
+                @if (game.stock > 0) {
                 <td>
-                    @if (game.stock > 0) {
                     <app-input-integer [(cantidad)]="game.cantidad" [max]="game.stock"></app-input-integer>
-                    Cant:  {{game.cantidad}}
-                    }
                 </td>
+                <td>
+                    <button class="btn" (click)="agregar_Al_Carrito(game)">Agregar</button>
+                </td>
+                }@else {
+                    <td></td>
+                    <td></td>
+                }
             </tr>
         } @empty {
             <tr>

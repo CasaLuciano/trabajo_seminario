@@ -1,1 +1,6 @@
-<p>Carrito de juegos</p>
+<h3>Carrito de juegos</h3>
+<ul class="list-group">
+    @for (game of paraComprar; track game.nombre) {
+        <li class="list-group-item">{{game.nombre}} <span>cantidad:</span> {{game.cantidad}}</li>
+    }
+</ul>

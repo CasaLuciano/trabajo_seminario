@@ -4,6 +4,7 @@ import { GamestoreHomeComponent } from './gamestore-home/gamestore-home.componen
 import { GamestoreComponent } from './gamestore/gamestore.component';
 
 const routes: Routes = [
+  { path: '', component: GamestoreHomeComponent },
   { path: 'home', component: GamestoreHomeComponent },
   { path: 'games', component: GamestoreComponent }
 ];
